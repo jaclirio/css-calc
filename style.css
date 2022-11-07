@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+
+.container{
+    background-color: red;
+    height: 100px;
+    --width: 100px;
+    /*width: calc(500px - calc(100px + 200px));*/
+    /*width: calc(100% - 30px); /* Always leave space between operation (+-/*) */
+    width: calc(var(--width)*2);
+    margin: 0 auto;
+}
+
+:root{
+    --hue:180;
+}
+
+.primary{
+    background-color: hsl(var(--hue), 100%, 50%);
+}
+
+.danger{
+    background-color: hsl(calc(var(--hue) - 180), 100%, 50%);
+}
